@@ -1,0 +1,5 @@
+main let
+	var B : float := 0.1;
+in begin
+	B := 1.1 + 1.1 + 1;
+end

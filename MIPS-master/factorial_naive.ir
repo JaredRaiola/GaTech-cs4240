@@ -1,0 +1,69 @@
+#start_function fact_st_1_0
+int fact_st_1_0(int n_stf_fact_2_0):
+int-list: $temp8,$temp9,$temp10,$temp0,$temp1,$temp2,$temp3,$temp4,$temp11,$temp5,$temp6,$temp7,n_stf_fact_2_0
+float-list: 
+fact_st_1_0:
+    assign,~$s2,0,
+    varstore,~$s2,$temp4
+    varload,~$s2,n_stf_fact_2_0
+    varstore,~$s2,$temp1
+    assign,~$s2,1,
+    varstore,~$s2,$temp2
+    assign,~$s2,1,
+    varstore,~$s2,$temp3
+    varload,~$s2,$temp1
+    varload,~$s1,$temp2
+    brneq,~$s2,~$s1,cond_0_stz_stf_fact_2_0
+    goto,cond_1_after_stf_fact_2_0,,
+cond_0_stz_stf_fact_2_0:
+    assign,~$s2,0,
+    varstore,~$s2,$temp3
+cond_1_after_stf_fact_2_0:
+    varload,~$s2,$temp3
+    varload,~$s1,$temp4
+    breq,~$s2,~$s1,if_after2__stf_fact_2_0
+    assign,~$s2,1,
+    varstore,~$s2,$temp0
+    varload,~$s2,$temp0
+    return,~$s2,,
+if_after2__stf_fact_2_0:
+    varload,~$s2,n_stf_fact_2_0
+    varstore,~$s2,$temp5
+    assign,~$s2,1,
+    varstore,~$s2,$temp6
+    varload,~$s2,$temp5
+    varload,~$s1,$temp6
+    sub,~$s2,~$s1,~$s0
+    varstore,~$s0,$temp7
+    callr,$temp8,fact_st_1_0,$temp7
+    varload,~$s2,$temp8
+    varstore,~$s2,r_st_1_0
+    varload,~$s2,n_stf_fact_2_0
+    varstore,~$s2,$temp9
+    varload,~$s2,r_st_1_0
+    varstore,~$s2,$temp10
+    varload,~$s2,$temp9
+    varload,~$s1,$temp10
+    mult,~$s2,~$s1,~$s0
+    varstore,~$s0,$temp11
+    varload,~$s0,$temp11
+    return,~$s0,,
+#end_function fact_st_1_0
+
+#start_function main	
+void main():
+int-list: $temp0,$temp1,$temp2,r_st_1_0
+float-list: 
+    assign,~$s0,1,
+    varstore,~$s0,r_st_1_0
+main:
+    assign,~$s0,5,
+    varstore,~$s0,$temp0
+    callr,$temp1,fact_st_1_0,$temp0
+    varload,~$s0,$temp1
+    varstore,~$s0,r_st_1_0
+    varload,~$s0,r_st_1_0
+    varstore,~$s0,$temp2
+    call,printi,$temp2
+    return,,,
+#end_function main

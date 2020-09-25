@@ -1,0 +1,41 @@
+#start_function main
+void main():
+int-list: $i, X[100], Y[100], $t0, $t1, $t2, $sum, $t3,
+float-list:
+    assign,Y,100,10
+    assign,X,100,10
+    assign,~$s2,0,
+    varstore,~$s2,$sum
+    assign,~$s2,0,
+    varstore,~$s2,$i
+main:
+    assign,~$s2,0,
+    varstore,~$s2,$i
+loop_label0:
+    varload,~$s2,$i
+    assign,~$s3,99,
+    brgt,~$s2,~$s3,loop_label1
+    varload,~$s1,$i,
+    array_load,~$s2,X,~$s1
+    varstore,~$s2,$t0
+    varload,~$s2,$i,
+    array_load,~$s1,Y,~$s2
+    varstore,~$s1,$t1
+    varload,~$s2,$t0
+    varload,~$s1,$t1
+    mult,~$s2,~$s1,~$s0
+    varstore,~$s0,$t2
+    varload,~$s1,$sum
+    varload,~$s2,$t2
+    add,~$s1,~$s2,~$s0
+    varstore,~$s0,$t3
+    varload,~$s1,$t3
+    varstore,~$s1,$sum
+    assign,~$s3,1,
+    varload,~$s1,$i
+    add,~$s1,~$s3,~$s1
+    varstore,~$s1,$i
+    goto,loop_label0,,
+loop_label1:
+    call,printi,$sum
+    return,,,

@@ -1,0 +1,13 @@
+main0:
+ add, A0, A2, var0
+ add, B0, A4, var1
+ add, C0, 2, var2
+ add, D0, 3, var3
+ add, E0, 4, var4
+if_label0:
+ assign, E0, var4,
+ assign, var5, 1,
+ breq, B0, Ba, if_label0
+ call, printi, A0
+ call, printi, B0
+ call, printi, 0

@@ -1,0 +1,27 @@
+main let
+    type C = array [5] of int;
+    type X = int;
+	var A,B : float := 113.1;
+	var H : int := 7;
+	var K : array [7] of int;
+	var D : array [88] of int := 6;
+	var R : C := 3;
+	function printf (n : float) : int begin
+	    while B < 25 do
+		    B := 2.0 + 5.0;
+		enddo;
+		return H;
+	end;
+	/* COMMENT :)))) */
+	function printf2 (z : float, g : int, l : float) begin
+	    for W := 1 to 10 do
+    		A := n + 5.0;
+    		if A > 6 then
+    		    B := 12 + 2 + 9 + 6;
+    		endif;
+    	enddo;
+    end;
+in begin
+	B := 1.5;
+	printf(A);
+end

@@ -1,0 +1,7 @@
+main int ,,,
+\n
+11234
+
+fibonacci
+
+var x := 1+1

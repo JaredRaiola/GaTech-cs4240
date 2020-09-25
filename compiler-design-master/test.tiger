@@ -1,0 +1,16 @@
+main let
+	var A : float := 113;
+    var B : float := 2;
+    var C : float := 1;
+    var D : float := 2;
+
+	function printf (n : float) : int begin
+		B := n + 5.0;
+        C := A+A+A+A+1+1.0;
+        D := B + 23;
+		return A;
+	end;
+in begin
+	B := 1.5;
+	printf(A);
+end

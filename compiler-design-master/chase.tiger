@@ -1,0 +1,6 @@
+main let
+	var A : int := 1;
+
+in begin
+	A := A + 1+ 1;
+end
